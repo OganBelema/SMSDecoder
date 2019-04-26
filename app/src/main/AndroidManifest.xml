@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.oganbelema.smsdecoder">
 
-    <!--The permission required to access the device's SMS-->
+    <!--The permissions required to access the device's SMS-->
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!--The permission required to read contact-->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -16,6 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <!--Registers broadcast listener-->
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
