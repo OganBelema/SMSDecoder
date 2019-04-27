@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">SMS Decoder</string>
     <string name="ven_ten_contact">Ven10</string>
+    <string name="waiting_for_message">Waiting for message…</string>
+    <string name="message_from">Message from Ven10</string>
+    <string name="width_and_length">%1$s x %2$s</string>
+    <string name="date_and_time">Date: %1$s \n Time: %2$s</string>
 </resources>
