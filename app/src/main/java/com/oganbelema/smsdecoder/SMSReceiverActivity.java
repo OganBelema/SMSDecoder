@@ -172,9 +172,9 @@ public class SMSReceiverActivity extends AppCompatActivity {
         Matcher colorMatcher = mColorsPattern.matcher(message);
 
         if (colorMatcher.find()){
-            String color1 = colorMatcher.group(1);
-            String color2 = colorMatcher.group(2);
-            styleDimensionTextView(color1, color2);
+            String colorCode1 = colorMatcher.group(1);
+            String colorCode2 = colorMatcher.group(2);
+            styleDimensionTextView(colorCode1, colorCode2);
         }
     }
 
@@ -207,9 +207,9 @@ public class SMSReceiverActivity extends AppCompatActivity {
     private void extractWidthAndLength(String message) {
         Matcher widthAndLengthMatcher = mWidthAndLengthPattern.matcher(message);
         if (widthAndLengthMatcher.find()){
-            String width = widthAndLengthMatcher.group(1);
-            String length = widthAndLengthMatcher.group(2);
-            displayDimensionTextView(width, length);
+            String dimensionW = widthAndLengthMatcher.group(1);
+            String dimensionL = widthAndLengthMatcher.group(2);
+            displayDimensionTextView(dimensionW, dimensionL);
         }
     }
 
