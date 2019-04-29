@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.support.constraint.Group;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -110,7 +111,7 @@ public class SMSReceiverActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms_receiver);
 
-        TextView awaitingMessageTextView = findViewById(R.id.awaiting_message_textView);
+        Group waitingForMessageViews = findViewById(R.id.waiting_for_message_views);
         mDimensionTextView = findViewById(R.id.dimension_textView);
         mCodedMessageTextView = findViewById(R.id.coded_message_textView);
         mDateAndTimeTextView = findViewById(R.id.date_time_textView);
@@ -126,7 +127,7 @@ public class SMSReceiverActivity extends AppCompatActivity {
             String message = bundle.getString(SMSReceiver.SMS_BODY_KEY);
 
             if (message != null){
-                awaitingMessageTextView.setVisibility(View.GONE);
+                waitingForMessageViews.setVisibility(View.GONE);
 
                 showSenderInActionBar();
 
